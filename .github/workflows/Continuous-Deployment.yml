@@ -30,6 +30,6 @@ jobs:
         
     - name: Run Instance
       run: |
-          aws ec2 run-instances --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=DevOps Project}]' --image-id ami-0f9fc25dd2506cf6d --count 1 --instance-type t2.micro --key-name ${{ secrets.KEY_NAME }} --security-group-ids ${{ secrets.SECURITY_GROUP }} --user-data file://${{github.workspace}}/amazon_web_service.sh > instance.txt
-           INSTANCE_ID="$(grep -o '"InstanceId": "[^"]*' instance.txt | grep -o '[^"]*$')" 
-           echo $INSTANCE_ID
+          aws ec2 run-instances --image-id ami-0f9fc25dd2506cf6d --count 1 --instance-type t2.micro \
+          --key-name 220rsa --subnet-id subnet-0ee95324fdf68a500 --security-group-ids sg-05251f794e3a7021e \
+          --user-data file://amazon_web_service.sh
