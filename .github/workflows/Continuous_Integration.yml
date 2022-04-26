@@ -19,9 +19,6 @@ jobs:
           .venv/bin/python3 test_app.py &
       - name: Install Plugin
         run: pip install pytest-github-actions-annotate-failures
-      - name: Install -cov package
-        run: pip install pytest-cov
       - name: Tests
         run: |
           .venv/bin/pytest
-          .venv/bin/pytest --cov test_app.py
