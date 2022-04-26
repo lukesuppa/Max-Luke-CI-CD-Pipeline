@@ -22,4 +22,4 @@ jobs:
       - name: Tests
         run: |
           .venv/bin/pytest
-          .venv/bin/pytest --cov test_app
+          .venv/bin/pytest --cov test_app.py
