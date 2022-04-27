@@ -1,0 +1,33 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+    - name: Install AWS CLI
+      id: install-aws-cli
+      uses: unfor19/install-aws-cli-action@master
+      with:
+        version: 2.5.8
+      
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+       aws-access-key-id: ASIA5Z2MMKZFRNZIEQ7O
+       aws-secret-access-key: AC4IBRTOHCkmQxrSttJq1kua8TD98Nk+ocPbtSMK
+       aws-session-token: FwoGZXIvYXdzEBsaDAWlNFRSnbvYTHit7CK6AfGt3zCs85ccB6oI+UcdzwuhdgNGqYb0l+OO1GOfcITctws4F0sWyJzlUY9vD/Ruujga3rQmOsCPDbZ5qDVTr1DaOAM4KHUB07Wvs04NjcX50GKRRs4SzU33ZLIaPRXaXLclKhTqZ3mlnQOxYCQqb9+nD60VbwR0koPYLgB89mm5dxw+AEjl3+WHVxQJ0a4wrC73nJGFHvYNQjpdZAHdKXwU4CD+XcJjA3UeJ29u1KNodO7gLMEwFVTqASi296WTBjIt79bmAjWbSHMPaA96AkM1dxo616C8xQ28tBzJjv8+IIcQVfeCnfYjb2VpYbNk
+       aws-region: us-east-1
+        
+    - name: Run Instance
+      run: |
+          aws ec2 run-instances --image-id ami-0f9fc25dd2506cf6d --count 1 --instance-type t2.micro --key-name 220rsa --subnet-id subnet-0ee95324fdf68a500 --security-group-ids sg-05251f794e3a7021e --user-data file://amazon_web_service.sh
