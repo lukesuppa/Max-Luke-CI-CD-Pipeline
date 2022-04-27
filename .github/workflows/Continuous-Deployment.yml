@@ -25,6 +25,7 @@ jobs:
       with:
        aws-access-key-id: ASIA5Z2MMKZFRNZIEQ7O
        aws-secret-access-key: AC4IBRTOHCkmQxrSttJq1kua8TD98Nk+ocPbtSMK
+       aws_session_token: FwoGZXIvYXdzEBsaDAWlNFRSnbvYTHit7CK6AfGt3zCs85ccB6oI+UcdzwuhdgNGqYb0l+OO1GOfcITctws4F0sWyJzlUY9vD/Ruujga3rQmOsCPDbZ5qDVTr1DaOAM4KHUB07Wvs04NjcX50GKRRs4SzU33ZLIaPRXaXLclKhTqZ3mlnQOxYCQqb9+nD60VbwR0koPYLgB89mm5dxw+AEjl3+WHVxQJ0a4wrC73nJGFHvYNQjpdZAHdKXwU4CD+XcJjA3UeJ29u1KNodO7gLMEwFVTqASi296WTBjIt79bmAjWbSHMPaA96AkM1dxo616C8xQ28tBzJjv8+IIcQVfeCnfYjb2VpYbNk
        aws-region: us-east-1
         
     - name: Run Instance
