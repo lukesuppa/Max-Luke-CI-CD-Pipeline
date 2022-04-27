@@ -8,10 +8,10 @@ For setup there are three main things that we need to do:
 2. Create an AWS EC2 instance to host our program.
 3. Create a CI/CD yml file to have continuous integration and continuous deployment.
 # Technologies Used 
-- [Github Actions] (https://docs.github.com/en/actions)
-- [AWS EC2 instance] (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
-- [Flask] (https://flask.palletsprojects.com/en/latest/)
-- [Pytest] (https://docs.pytest.org/en/7.1.x/contents.html)
-- [CI/CD Pipeline] (https://docs.gitlab.com/ee/ci/pipelines/)
+- [Github Actions](https://docs.github.com/en/actions)
+- [AWS EC2 instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
+- [Flask](https://flask.palletsprojects.com/en/latest/)
+- [Pytest](https://docs.pytest.org/en/7.1.x/contents.html)
+- [CI/CD Pipeline](https://docs.gitlab.com/ee/ci/pipelines/)
 # Background
 TODO
