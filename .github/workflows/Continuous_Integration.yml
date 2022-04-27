@@ -1,0 +1,24 @@
+name: Run Tests
+on: [push, pull_request]
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Python 3
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python3 -m venv .venv
+          .venv/bin/pip install -r requirements.txt
+      - name: Run Flask Server
+        run: |
+          .venv/bin/python3 test_app.py &
+      - name: Install Plugin
+        run: pip install pytest-github-actions-annotate-failures
+      - name: Tests
+        run: |
+          .venv/bin/pytest
