@@ -14,4 +14,4 @@ For setup there are three main things that we need to do:
 - [Pytest](https://docs.pytest.org/en/7.1.x/contents.html)
 - [CI/CD Pipeline](https://docs.gitlab.com/ee/ci/pipelines/)
 # Background
-TODO
+- [Amazon CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
