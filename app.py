@@ -1,5 +1,4 @@
 
-"""This program displays Hello World text"""
 
 from flask import Flask
 
