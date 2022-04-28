@@ -22,3 +22,11 @@ jobs:
       - name: Tests
         run: |
           .venv/bin/pytest
+      - name: Insatll Pylint
+        run: |
+          pip install pylint
+          pip install flask
+          pip install python-dotenv
+      - run: Run Pylint
+          pylint -d invalid-name -d consider-using-with app.py
+          pylint -d invalid-name -d consider-using-with -d missing-module-docstring -d missing-function-docstring test_app.py 
