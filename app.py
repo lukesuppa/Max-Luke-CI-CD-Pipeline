@@ -8,7 +8,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    """This annotation tells Flask to route any traffic for / to this function"""
     return '<h1>Hello World</h1>'
 
 
