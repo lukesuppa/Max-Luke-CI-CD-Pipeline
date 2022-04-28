@@ -27,3 +27,4 @@ jobs:
           pip install pylint
           pip install flask
           pylint app.py
+          pylint test_app.py
