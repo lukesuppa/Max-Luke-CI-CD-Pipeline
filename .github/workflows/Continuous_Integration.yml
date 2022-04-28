@@ -22,3 +22,8 @@ jobs:
       - name: Tests
         run: |
           .venv/bin/pytest
+      - name: Insatll and Run Pylint
+        run: |
+          pip install pylint
+          pip install flask
+          pylint app.py
